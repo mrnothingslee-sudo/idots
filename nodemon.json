@@ -1,0 +1,7 @@
+{
+  "legacyWatch": true,
+  "watch": ["src"],
+  "ext": "ts,json",
+  "ignore": ["src/**/*.test.ts"],
+  "exec": "npm start"
+}

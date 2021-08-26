@@ -1,0 +1,71 @@
+{
+  "name": "utility-discord-bot",
+  "version": "1.0.0",
+  "description": "https://discord.com/api/oauth2/authorize?client_id=783752800138952744&permissions=1573383287&scope=bot",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && jest && tsc",
+    "shell:bot": "docker exec -it utility_discord_bot sh",
+    "shell:db": "docker exec -it utility_discord_bot_db sh -c \"psql -d utility_discord_bot_db -U user\"",
+    "dev": "nodemon",
+    "start": "ts-node --transpile-only --require tsconfig-paths/register src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeyaworski/utility-discord-bot.git"
+  },
+  "author": "Michael Yaworski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeyaworski/utility-discord-bot/issues"
+  },
+  "homepage": "https://github.com/mikeyaworski/utility-discord-bot#readme",
+  "dependencies": {
+    "@vvo/tzdb": "^6.7.0",
+    "axios": "^0.21.1",
+    "chrono-node": "^2.3.0",
+    "cron": "^1.8.2",
+    "discord.js": "^12.5.1",
+    "discord.js-commando": "github:discordjs/Commando",
+    "dotenv": "^8.2.0",
+    "emoji-regex": "^9.2.0",
+    "express": "^4.17.1",
+    "ini": "^2.0.0",
+    "lodash.chunk": "^4.2.0",
+    "lodash.get": "^4.4.2",
+    "lodash.uniq": "^4.5.0",
+    "node-notifier": "^9.0.0",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "@types/cron": "^1.7.3",
+    "@types/emoji-regex": "^9.2.0",
+    "@types/express": "^4.17.9",
+    "@types/jest": "^26.0.16",
+    "@types/lodash.chunk": "^4.2.6",
+    "@types/lodash.get": "^4.4.6",
+    "@types/lodash.uniq": "^4.5.6",
+    "@types/node": "^14.14.10",
+    "@types/sequelize": "^4.28.9",
+    "@types/ws": "^7.4.6",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.23.3",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "pre-commit": "^1.2.2",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0",
+    "tsc": "^2.0.3",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.3.5"
+  },
+  "pre-commit": [
+    "test"
+  ]
+}
